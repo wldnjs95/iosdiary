@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import Foundation
 
-struct DiaryEntry: Identifiable, Codable {
+struct DiaryEntry: Identifiable, Codable, Hashable {
     var id = UUID()
     var date: Date
     var emotion : String
     var content: String
 }
+

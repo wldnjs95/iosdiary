@@ -125,4 +125,14 @@ extension Date {
         let calendar = Calendar.current
         return calendar.date(byAdding: .day, value: count, to: self)!
     }
+    
+    static func createDateUsingComponents(year: Int, month: Int, day: Int) -> Date? {
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = month
+        dateComponents.day = day
+        
+        let calendar = Calendar.current
+        return calendar.date(from: dateComponents)
+    }
 }
