@@ -24,7 +24,6 @@ struct MonthView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            
             // label of Month
             Text(monthName)
                 .font(.title)
@@ -42,7 +41,7 @@ struct MonthView: View {
             }
 
             LazyVGrid(columns: columns){
-                ForEach(0..<firstDayOffset) { _ in
+                ForEach(0 ..< firstDayOffset) { _ in
                     DayView()
                 }
                 
