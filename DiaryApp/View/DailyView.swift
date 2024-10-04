@@ -13,11 +13,12 @@ struct DailyView: View {
     var diaryManager = DiaryManager()
     
     var body: some View {
-        
-        if let diaryEntry = diaryManager.getEntry(for: date) {
-            DiaryEntryRow( detailView: DiaryEntryDetailView(entry:  diaryEntry ) )
+        VStack{
+            if let diaryEntry = diaryManager.getEntry(for: date) {
+                DiaryEntryRow( detailView: DiaryEntryDetailView(entry:  diaryEntry ) )
+            }
         }
-        
+        Spacer()
     }
 }
 
