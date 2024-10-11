@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct DiaryEntryDetailView: View {
-    var entry: DiaryEntry // diary to read
+    @Binding var entry: DiaryEntry // 바인딩을 통해 데이터 수정 가능
+
+    @State private var isEditing = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -21,11 +23,23 @@ struct DiaryEntryDetailView: View {
         }
         .padding()
         .navigationTitle("Diary Entry")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Edit") {
+                    isEditing = true
+                }
+            }
+        }
+        .sheet(isPresented: $isEditing) {
+            EditDiaryEntryView(diaryEntry: $entry)
+        }
     }
 }
 
 struct DiaryEntryDetailView_Previews: PreviewProvider {
+    @State static var sampleEntry = DiaryEntry(date: Date(), emotion: "Happy", content: "Today was a great day!")
+
     static var previews: some View {
-        DiaryEntryDetailView(entry: DiaryEntry(date: Date(), emotion: "Happy", content: "Today was a great day!"))
+        DiaryEntryDetailView(entry: $sampleEntry)
     }
 }

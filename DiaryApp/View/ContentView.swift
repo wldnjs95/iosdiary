@@ -20,17 +20,17 @@ struct ContentView: View {
                 // Background Content ScrollView
                 ScrollView {
                     VStack(spacing: 16) {
-                        ForEach(filteredDiaryEntries) { entry in
-                            NavigationLink(destination: DiaryEntryDetailView(entry: entry)) {
+                        ForEach(filteredDiaryEntries.indices, id: \.self) { index in
+                            NavigationLink(destination: DiaryEntryDetailView(entry: $diaryEntries[index])) {
                                 RoundedRectangle(cornerRadius: 12)
                                     .fill(Color.gray.opacity(0.2))
                                     .frame(height: 120)
                                     .overlay(
                                         VStack(alignment: .leading, spacing: 8) {
-                                            Text(entry.date, style: .date)
+                                            Text(diaryEntries[index].date, style: .date)
                                                 .font(.headline)
                                                 .foregroundColor(.gray)
-                                            Text(entry.content)
+                                            Text(diaryEntries[index].content)
                                                 .font(.body)
                                                 .foregroundColor(.black)
                                                 .lineLimit(2)
