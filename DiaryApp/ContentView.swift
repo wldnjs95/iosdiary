@@ -3,6 +3,16 @@ import SwiftUI
 struct ContentView: View {
     @State private var diaryEntries: [DiaryEntry] = []
     @State private var showEntryForm = false
+    @State private var searchText = ""
+    @State private var showSearchBar = false
+
+    var filteredDiaryEntries: [DiaryEntry] {
+        if searchText.isEmpty {
+            return diaryEntries
+        } else {
+            return diaryEntries.filter { $0.content.contains(searchText) }
+        }
+    }
 
     var body: some View {
         NavigationView {
@@ -10,7 +20,7 @@ struct ContentView: View {
                 // Background Content ScrollView
                 ScrollView {
                     VStack(spacing: 16) {
-                        ForEach(diaryEntries) { entry in
+                        ForEach(filteredDiaryEntries) { entry in
                             NavigationLink(destination: DiaryEntryDetailView(entry: entry)) {
                                 RoundedRectangle(cornerRadius: 12)
                                     .fill(Color.gray.opacity(0.2))
@@ -31,8 +41,11 @@ struct ContentView: View {
                         }
                     }
                     .padding()
+                    .onAppear {
+                        showSearchBar = true
+                    }
                 }
-                
+
                 // Floating '+' Button to add a new entry
                 VStack {
                     Spacer()
@@ -65,6 +78,10 @@ struct ContentView: View {
                         Image(systemName: "calendar")
                     }
                 }
+            }
+            .searchable(text: $searchText, prompt: "Search diary entries")
+            .onChange(of: searchText) { newValue in
+                showSearchBar = !newValue.isEmpty // 검색어가 있을 때만 검색바가 나타나도록 설정
             }
         }
         .sheet(isPresented: $showEntryForm) {
