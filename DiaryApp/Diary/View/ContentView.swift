@@ -74,7 +74,7 @@ struct ContentView: View {
                     NavigationLink(destination: Text("Stats 화면")) {
                         Image(systemName: "chart.bar")
                     }
-                    NavigationLink(destination: Text("Calendar 화면")) {
+                    NavigationLink(destination: CalendarPage()) {
                         Image(systemName: "calendar")
                     }
                 }

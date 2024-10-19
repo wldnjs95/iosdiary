@@ -1,0 +1,26 @@
+[
+    {
+        "id": "d8420c59-748a-4be9-b58b-1638c835bfb2",
+        "date": "2024-09-27T10:30:00Z",
+        "emotion": "Happy",
+        "content": "Had a wonderful day at the park. The weather was perfect, and I felt really relaxed."
+    },
+    {
+        "id": "b2a9f86a-0d0d-4e2c-8e18-dbb098b5b710",
+        "date": "2024-09-26T08:15:00Z",
+        "emotion": "Stressed",
+        "content": "Work was overwhelming today. Too many deadlines, and it felt like I couldn't catch a break."
+    },
+    {
+        "id": "7c2d1f17-1f2f-46d4-bf7a-4a327b28cf42",
+        "date": "2024-09-25T21:00:00Z",
+        "emotion": "Excited",
+        "content": "Started a new project that I'm really passionate about. Can't wait to see where it goes!"
+    },
+    {
+        "id": "e5f14dfc-1b6d-4b0d-9c84-6b58c6b30c4a",
+        "date": "2024-09-24T18:45:00Z",
+        "emotion": "Sad",
+        "content": "Had a tough conversation with a close friend. Feeling down, but it was necessary."
+    }
+]
