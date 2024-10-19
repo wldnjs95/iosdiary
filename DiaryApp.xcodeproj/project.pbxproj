@@ -15,7 +15,7 @@
 		1BA9B6492C82420A007742B4 /* DiaryEntryForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9B6482C82420A007742B4 /* DiaryEntryForm.swift */; };
 		1BA9B64B2C824221007742B4 /* DiaryEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9B64A2C824221007742B4 /* DiaryEntryDetailView.swift */; };
 		1BA9B64D2C824263007742B4 /* TestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9B64C2C824263007742B4 /* TestCode.swift */; };
-		1BA9B64F2C824272007742B4 /* DiaryEntryFormTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9B64E2C824272007742B4 /* DiaryEntryFormTest.swift */; };
+		1BB369852CC437A200E6BC90 /* EditDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB369842CC437A200E6BC90 /* EditDiaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		1BA9B6482C82420A007742B4 /* DiaryEntryForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryForm.swift; sourceTree = "<group>"; };
 		1BA9B64A2C824221007742B4 /* DiaryEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryDetailView.swift; sourceTree = "<group>"; };
 		1BA9B64C2C824263007742B4 /* TestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCode.swift; sourceTree = "<group>"; };
-		1BA9B64E2C824272007742B4 /* DiaryEntryFormTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryFormTest.swift; sourceTree = "<group>"; };
+		1BB369842CC437A200E6BC90 /* EditDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				1BA9B6382C824178007742B4 /* DiaryAppApp.swift */,
-				1BA9B63A2C824178007742B4 /* ContentView.swift */,
-				1BA9B6462C8241DC007742B4 /* DiaryEntry.swift */,
 				1BA9B64C2C824263007742B4 /* TestCode.swift */,
-				1BA9B64E2C824272007742B4 /* DiaryEntryFormTest.swift */,
-				1BA9B6482C82420A007742B4 /* DiaryEntryForm.swift */,
-				1BA9B64A2C824221007742B4 /* DiaryEntryDetailView.swift */,
 				1BA9B63C2C824179007742B4 /* Assets.xcassets */,
+				1BB369862CC43F6D00E6BC90 /* Model */,
+				1BB369872CC43F7A00E6BC90 /* View */,
 				1BA9B63E2C824179007742B4 /* Preview Content */,
 			);
 			path = DiaryApp;
@@ -80,6 +77,25 @@
 				1BA9B63F2C824179007742B4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1BB369862CC43F6D00E6BC90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BA9B6462C8241DC007742B4 /* DiaryEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BB369872CC43F7A00E6BC90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BA9B63A2C824178007742B4 /* ContentView.swift */,
+				1BB369842CC437A200E6BC90 /* EditDiaryView.swift */,
+				1BA9B64A2C824221007742B4 /* DiaryEntryDetailView.swift */,
+				1BA9B6482C82420A007742B4 /* DiaryEntryForm.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BA9B64F2C824272007742B4 /* DiaryEntryFormTest.swift in Sources */,
 				1BA9B63B2C824178007742B4 /* ContentView.swift in Sources */,
 				1BA9B64B2C824221007742B4 /* DiaryEntryDetailView.swift in Sources */,
 				1BA9B6472C8241DC007742B4 /* DiaryEntry.swift in Sources */,
 				1BA9B6492C82420A007742B4 /* DiaryEntryForm.swift in Sources */,
+				1BB369852CC437A200E6BC90 /* EditDiaryView.swift in Sources */,
 				1BA9B64D2C824263007742B4 /* TestCode.swift in Sources */,
 				1BA9B6392C824178007742B4 /* DiaryAppApp.swift in Sources */,
 			);
