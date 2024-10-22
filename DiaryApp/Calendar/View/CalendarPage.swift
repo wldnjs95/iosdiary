@@ -11,27 +11,17 @@ struct CalendarPage: View {
     var calendarModel = CalendarModel()
 
     var body: some View {
-        // NavigationView added
-        NavigationView {
-            ScrollViewReader { scrollViewProxy in
-                CalendarView(calendarModel: calendarModel)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Text("Calendar")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                        }
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: {
-                                withAnimation {
-                                    scrollToToday(scrollViewProxy: scrollViewProxy)
-                                }
-                            }) {
-                                Text("Today")
-                            }
+        ScrollViewReader { proxy in
+            CalendarView( calendarModel: calendarModel )
+                .navigationTitle("Calendar")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button( "Today" ) {
+                            scrollToToday(scrollViewProxy: proxy)
                         }
                     }
-            }
+                }
         }
     }
     

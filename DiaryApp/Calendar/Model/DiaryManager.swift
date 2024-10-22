@@ -23,7 +23,7 @@ class DiaryManager {
         #endif
     }
     
-    // 특정 날짜에 해당하는 일기 가져오기
+    // Retrieve diary entries for a specific date
     func getEntry(for date: Date) -> DiaryEntry? {
         let calendar = Calendar.current
         return diaryEntries.first { entry in
