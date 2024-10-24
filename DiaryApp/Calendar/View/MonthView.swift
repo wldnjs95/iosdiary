@@ -11,11 +11,6 @@ struct MonthView: View {
     var monthModel: MonthModel
     let daysOfWeek = Date.capitalizedFirstLettersOfWeekdays
     let columns = Array(repeating: GridItem(.flexible()), count: 7)
-    //@State private var days: [Date] = []
-
-//    init(monthModel: MonthModel){
-//        self.monthModel = MonthModel( date.startOfMonth )
-//    }
     
     var firstDayOffset: Int {
         let num = (monthModel.firstDayOfMonth.weekDay() - 2) % 7
